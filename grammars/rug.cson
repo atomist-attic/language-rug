@@ -1,0 +1,93 @@
+'scopeName': 'source.rug'
+'name': 'Rug'
+'fileTypes': [
+  'rug',
+  'rt'
+]
+
+'patterns': [
+  {
+    'match': '\\b(param)\\s+(\\w+)\\s*\\:'
+    'captures':
+        '1':
+            'name': 'keyword.control.rug'
+        '2':
+            'name': 'entity.name.function.rug'
+    'name': 'meta.param.rug'
+},
+{
+  'match': '\\@\\w+'
+  'name': 'entity.name.tag.rug'
+},
+{
+  'match': '(do|begin|end)'
+  'name': 'keyword.control.rug'
+},
+{
+  'begin': '\\"'
+  'end': '\\"'
+  'name': 'string.quoted.double.rug'
+},
+{
+  'begin': '\\{'
+  'beginCaptures':
+        '0':
+            'name': 'punctuation.definition.string.begin.rug'
+  'end': '\\}'
+  'endCaptures':
+        '0':
+            'name': 'punctuation.definition.string.begin.rug'
+  'name': 'string.interpolated.rug'
+},
+{
+  'match': '\\#.*'
+  'name': 'comment.line.number-sign.rug'
+},
+{
+  'match': '\\b(editor)\\s+(\\w+)'
+  'captures':
+      '1':
+          'name': 'keyword.control.rug'
+      '2':
+          'name': 'entity.name.type.rug'
+  'name': 'meta.type.rug'
+},
+{
+  'match': '\\b(with)\\s+([a-zA-Z_.-]*)\\s+(\\w+)\\s+(when)'
+  'captures':
+      '1':
+          'name': 'keyword.control.rug'
+      '2':
+          'name': 'entity.name.type.rug'
+      '3':
+          'name': 'variable.parameter.rug'
+      '4':
+          'name': 'keyword.control.rug'
+  'name': 'meta.with.rug'
+},
+{
+  'match': '\\b(with)\\s+([a-zA-Z_.-]*)\\s+(\\w+)\\s+'
+  'captures':
+      '1':
+          'name': 'keyword.control.rug'
+      '2':
+          'name': 'entity.name.type.rug'
+      '3':
+          'name': 'variable.parameter.rug'
+  'name': 'meta.with.rug'
+},
+{
+  'match': '(do)\\s*(\\w*)'
+  'captures':
+      '1':
+          'name': 'keyword.control.rug'
+      '2':
+          'name': 'entity.name.function.rug'
+  'name': 'meta.do.rug'
+},
+{
+  'begin': '\\"'
+  'end': '\\"'
+  'name': 'string.quoted.double.rug'
+}
+]

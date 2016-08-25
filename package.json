@@ -1,0 +1,14 @@
+{
+  "name": "language-rug",
+  "version": "0.0.0",
+  "description": "A Rug language package for Atom",
+  "keywords": [ "Rug", "Atomist"
+  ],
+  "repository": "https://github.com/atomisthq/language-rug",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
