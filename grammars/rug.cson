@@ -44,7 +44,7 @@
   'name': 'comment.line.number-sign.rug'
 },
 {
-  'match': '\\b(editor)\\s+(\\w+)'
+  'match': '\\b(editor|reviewer)\\s+(\\w+)'
   'captures':
       '1':
           'name': 'keyword.control.rug'
