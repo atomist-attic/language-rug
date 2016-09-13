@@ -20,24 +20,14 @@
   'name': 'entity.name.tag.rug'
 },
 {
-  'match': '(begin|end)\\s+'
+  'match': '(begin|end|editWith)\\s+'
   'name': 'keyword.control.rug'
 },
+
 {
   'begin': '\\"'
   'end': '\\"'
   'name': 'string.quoted.double.rug'
-},
-{
-  'begin': '\\{'
-  'beginCaptures':
-        '0':
-            'name': 'punctuation.definition.string.begin.rug'
-  'end': '\\}'
-  'endCaptures':
-        '0':
-            'name': 'punctuation.definition.string.begin.rug'
-  'name': 'string.interpolated.rug'
 },
 {
   'match': '\\#.*'
@@ -49,7 +39,7 @@
   'name': 'comment.block.rug'
 },
 {
-  'match': '\\b(editor|reviewer|uses)\\s+([\\w.-]+)'
+  'match': '\\b(editor|reviewer|uses|executor)\\s+([\\w.-]+)'
   'captures':
       '1':
           'name': 'keyword.control.rug'
@@ -89,10 +79,5 @@
       '2':
           'name': 'entity.name.function.rug'
   'name': 'meta.do.rug'
-},
-{
-  'begin': '\\"'
-  'end': '\\"'
-  'name': 'string.quoted.double.rug'
 }
 ]
