@@ -1,0 +1,45 @@
+'scopeName': 'source.rug-test'
+'name': 'Rug Test'
+'fileTypes': [
+  'rt'
+]
+
+'patterns': [ {
+  'begin': '^\\s*(scenario|given|when|then|and)'
+  'end': '(?<!///)$'
+  'captures':
+      '1':
+          'name': 'keyword.control.rug'
+  'name': 'meta.type.rug'
+  'patterns': [
+    {
+      'begin': '\\"'
+      'end': '\\"'
+      'name': 'string.quoted.double.rug'
+    }
+  ]
+},
+{
+  'begin': '\\"'
+  'end': '\\"'
+  'name': 'string.quoted.double.rug'
+},
+{
+  'match': '\\#.*'
+  'name': 'comment.line.number-sign.rug'
+},
+{
+  'begin': '\\/\\*'
+  'end': '\\*\\/'
+  'name': 'comment.block.rug'
+},
+{
+    'match': '\\b(let)\\s+(\\w+)\\s*\\='
+    'captures':
+        '1':
+            'name': 'keyword.control.rug'
+        '2':
+            'name': 'entity.name.function.rug'
+    'name': 'meta.param.rug'
+}
+]

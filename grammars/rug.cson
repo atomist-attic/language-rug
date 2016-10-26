@@ -1,13 +1,20 @@
 'scopeName': 'source.rug'
 'name': 'Rug'
 'fileTypes': [
-  'rug',
-  'rt'
+  'rug'
 ]
 
-'patterns': [
-  {
+'patterns': [ {
     'match': '\\b(param)\\s+(\\w+)\\s*\\:'
+    'captures':
+        '1':
+            'name': 'keyword.control.rug'
+        '2':
+            'name': 'entity.name.function.rug'
+    'name': 'meta.param.rug'
+},
+{
+    'match': '\\b(let)\\s+(\\w+)\\s*\\='
     'captures':
         '1':
             'name': 'keyword.control.rug'
@@ -23,7 +30,6 @@
   'match': '(begin|end|editWith)\\s+'
   'name': 'keyword.control.rug'
 },
-
 {
   'begin': '\\"'
   'end': '\\"'
@@ -39,7 +45,7 @@
   'name': 'comment.block.rug'
 },
 {
-  'match': '\\b(editor|reviewer|uses|executor)\\s+([\\w.-]+)'
+  'match': '\\b(editor|reviewer|uses|executor|precondition|predicate)\\s+([\\w.-]+)'
   'captures':
       '1':
           'name': 'keyword.control.rug'
